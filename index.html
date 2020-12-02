@@ -5,17 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This is my main page, including navigation, my logo and some of my work displayed">
     <meta name="keywords" content="Portfolio, main page, first look">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="scripts.js">
     <title>Portfolio</title>
+
 </head>
 <body>
     <header>
-
-    </header>
     <nav>
-
+        <ul>
+            <li><a href="index.html">Forside</a></li>
+            <li><a href="cv.html">Mit CV</a></li>
+            <li><a href="about.html">Om mig</a></li>
+            <li><a href="projects.html">Projekter</a></li>
+            <li><a href="gallery.html">Galleri</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+        </ul>
     </nav>
-    <main>
 
+    <section id="myNav" class="menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="./images/burgermenu-close.png" alt=""></a>
+        <div class="menu-content">
+            <a href="index.html">Forside</a>
+            <a href="cv.html">Mit CV</a>
+            <a href="about.html">Om mig</a>
+            <a href="projects.html">Projekter</a>
+            <a href="gallery.html">Galleri</a>
+            <a href="contact.html">Kontakt</a>
+        </div>
+    </section>
+        
+    <span onclick="openNav()"><img src="./images/burgermenu.png" alt="burgermenu"></span>
+
+    <script src="scripts.js"></script>
+    </header>
+
+<div class="grid-container">
+
+    <main>
+        <img src="./images/logo.png" alt="logo">
     </main>
     <section>
 
@@ -23,5 +51,6 @@
     <footer>
 
     </footer>
+</div>
 </body>
 </html>
