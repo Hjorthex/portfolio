@@ -2,8 +2,6 @@
   margin: 0;
   padding: 0;
   font-family: Raleway;
-  color: #101010;
-  color: #4ca788;
   z-index: 100;
 }
 
@@ -32,10 +30,9 @@ header nav {
 
 /*Burger menu start*/
 .menu {
-  display: flex;
-  flex-direction: column;
   height: 100%;
   position: fixed;
+  width: 0;
   right: 0;
   z-index: 110;
   background-color: #101010;
@@ -83,7 +80,6 @@ header nav {
   grid-template-rows: auto;
   grid-template-areas:
     "lp-main lp-main lp-main lp-main lp-main lp-main"
-    ". lp-main-txt lp-main-txt lp-main-txt lp-main-txt ."
     "lp-section lp-section lp-section lp-section lp-section lp-section"
     "footer footer footer footer footer footer";
 }
@@ -92,46 +88,65 @@ header nav {
 /*Main start*/
 .landing-page {
   grid-area: lp-main;
-  display: flex;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 2rem 1fr 1fr 1fr 1fr 2rem;
+  grid-template-rows: auto;
+  grid-template-areas:
+    ". lp-main-logo lp-main-logo lp-main-logo lp-main-logo ."
+    ". lp-main-txt lp-main-txt lp-main-txt lp-main-txt .";
   flex-direction: column;
   background-color: #ffffff;
-  margin: 0 2rem 0 2rem;
-  height: 90vh;
+  padding-bottom: 48vh;
 }
 
 .landing-page img {
-  margin: 2rem auto;
+  grid-area: lp-main-logo;
+  padding: 3rem 0 3rem 0;
   width: 100%;
 }
 
 .landing-page h1 {
   grid-area: lp-main-txt;
-  margin: 1rem 1rem 0 1rem;
-  padding: 0.7rem 0 0.7rem 0;
+  padding: 0.6rem 0 0.6rem 0;
   text-align: center;
   font-weight: normal;
   border-style: solid none solid none;
   border-width: 0.35rem;
   font-size: 1.5em;
   text-transform: uppercase;
+  color: #4ca788;
 }
 /*Main end*/
 
 /*Section start*/
 .landing-page-project-ref {
   grid-area: lp-section;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 2rem 1fr 1fr 1fr 1fr 2rem;
+  grid-template-rows: auto;
+  grid-template-areas:
+    ". colab colab colab colab ."
+    ". pers pers pers pers ."
+    ". abt abt abt abt .";
   background-color: #101010;
   width: 100%;
   padding-bottom: 8rem;
+  padding-top: 2.5rem;
 }
 
-.landing-page-project-ref div {
-  grid-area: lp-section;
-  display: flex;
-  flex-direction: column;
-  padding: 4rem 2rem 0 2rem;
+.colab-projects {
+  grid-area: colab;
+  width: 100%;
+}
+
+.personal-gal {
+  grid-area: pers;
+}
+
+.about-me {
+  grid-area: abt;
 }
 
 .landing-page-project-ref div img {
@@ -142,7 +157,8 @@ header nav {
 }
 
 .landing-page-project-ref div h1 {
-  padding: 0 0 2rem 0;
+  padding: 2.5rem 0 2rem 0;
+  color: #4ca788;
 }
 
 /*Within section class divs*/
@@ -153,7 +169,7 @@ header nav {
 .colab-projects img {
   width: 100%;
   height: 10rem;
-  object-fit: cover 1;
+  object-fit: cover;
 }
 
 .personal-gal h1 {
@@ -193,6 +209,7 @@ footer {
   width: 100%;
   background-color: #4ca788;
   padding: 2.5rem 0 5rem 0;
+  margin-top: -2rem;
 }
 
 footer div a img {
@@ -208,7 +225,6 @@ footer div a {
 }
 
 /*Contact information specific*/
-
 .contact-info {
   grid-area: contact;
   display: grid;
@@ -236,10 +252,29 @@ footer div a {
   grid-area: reference;
 }
 
-.contact-info p {
+.tel-email h1,
+.tel-email h2 {
   color: #ffffff;
   line-height: 2rem;
   font-size: 1.2em;
+  font-weight: normal;
+}
+
+.reference h1,
+.reference h2 {
+  color: #ffffff;
+  line-height: 1.9rem;
+  font-size: 1.2em;
+  font-weight: normal;
+}
+
+.reference h1 {
+  padding-top: 0.1rem;
+  font-family: sans-serif;
+}
+
+.reference h2 {
+  padding-top: 0.1rem;
 }
 
 /*Social media specific*/
