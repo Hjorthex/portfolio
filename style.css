@@ -10,6 +10,8 @@
   src: url(./fonts/Raleway-VariableFont_wght.ttf);
 }
 
+/*-------------------- HEADER --------------------*/
+
 /*Header start*/
 header {
   width: 100%;
@@ -193,6 +195,72 @@ header nav {
   object-position: 0 18%;
 }
 /*Section end*/
+
+/*------------------------ CONTACT.HTML ------------------------*/
+
+.contact-form {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 2rem 1fr 1fr 1fr 1fr 2rem;
+  grid-template-rows: auto;
+  grid-template-areas:
+    ". cnt-head cnt-head cnt-head cnt-head ."
+    ". form form form form ."
+    ". . form-btn form-btn . ."
+    "footer footer footer footer footer footer";
+  padding: 6rem 0 10rem 0;
+}
+
+.contact-form h1 {
+  grid-area: cnt-head;
+  padding: 1rem 0 0 0;
+  color: #4ca788;
+}
+
+.contact-form div {
+  grid-area: form;
+}
+
+.contact-form div input {
+  border-style: solid;
+  border-width: 0.2rem;
+  border-color: #101010;
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 0.5rem 0 0.5rem 0;
+}
+
+.contact-form div p {
+  padding: 1rem 0 0 1rem;
+  color: #4ca788;
+  font-size: 1.5em;
+}
+
+.contact-form div textarea {
+  width: 100%;
+  border-style: solid;
+  border-width: 0.2rem;
+  border-color: #101010;
+  border-radius: 0.5rem;
+  height: 5rem;
+}
+
+.contact-form button {
+  grid-area: form-btn;
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: #4ca788;
+  border-radius: 0.5rem;
+  background-color: #4ca788;
+  color: white;
+  padding: 0.5rem;
+  width: 100%;
+  text-align: center;
+}
+
+/*------------------------ FOOTER ------------------------*/
 
 /*Footer start*/
 
