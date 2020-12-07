@@ -208,7 +208,7 @@ header nav {
     ". form form form form ."
     ". . form-btn form-btn . ."
     "footer footer footer footer footer footer";
-  padding: 6rem 0 10rem 0;
+  padding: 7rem 0 10rem 0;
 }
 
 .contact-form h1 {
@@ -223,7 +223,7 @@ header nav {
 
 .contact-form div input {
   border-style: solid;
-  border-width: 0.2rem;
+  border-width: 0.1rem;
   border-color: #101010;
   border-radius: 0.5rem;
   width: 100%;
@@ -233,13 +233,13 @@ header nav {
 .contact-form div p {
   padding: 1rem 0 0 1rem;
   color: #4ca788;
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 
 .contact-form div textarea {
   width: 100%;
   border-style: solid;
-  border-width: 0.2rem;
+  border-width: 0.1rem;
   border-color: #101010;
   border-radius: 0.5rem;
   height: 5rem;
@@ -255,9 +255,57 @@ header nav {
   border-radius: 0.5rem;
   background-color: #4ca788;
   color: white;
-  padding: 0.5rem;
+  padding: 0.8rem;
   width: 100%;
+  align-items: center;
+}
+
+/*------------------------ CV.HTML ------------------------*/
+
+.cv-page {
+  padding: 5rem 0 5rem 0;
+}
+
+.cv-page div {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 2rem 1fr 1fr 1fr 1fr 2rem;
+  grid-template-rows: auto;
+  grid-template-areas:
+    ". . cv-pic cv-pic . ."
+    ". its-me its-me its-me its-me ."
+    ". about-me-head about-me-head about-me-head about-me-head ."
+    ". cv-about-txt cv-about-txt cv-about-txt cv-about-txt .";
+}
+
+.cv-page div img {
+  grid-area: cv-pic;
+  width: 100%;
+  border-style: solid;
+  border-width: 0.3rem;
+  border-color: #4ca788;
+  border-radius: 50%;
+}
+
+.cv-page div h1 {
+  grid-area: its-me;
+  font-size: 1.6em;
   text-align: center;
+  border-style: none none solid none;
+  border-width: 0.3rem;
+  border-color: #4ca788;
+  padding: 1rem 0 0.5rem 0;
+}
+
+.cv-page div h2 {
+  grid-area: about-me-head;
+  padding: 5.5rem 0 0 0;
+  font-size: 1.6em;
+  color: #4ca788;
+}
+
+.cv-page div p {
+  grid-area: cv-about-txt;
 }
 
 /*------------------------ FOOTER ------------------------*/
