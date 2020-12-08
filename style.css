@@ -382,6 +382,69 @@ header nav {
   color: white;
 }
 
+/*------------------------ PROJECTS ------------------------*/
+
+.projects {
+  display: grid;
+  grid-gap: 1rem;
+  width: 100vw;
+  grid-template-columns: 2rem 1fr 1fr 1fr 1fr 2rem;
+  grid-template-rows: auto;
+  grid-template-areas:
+    ". space space space space ."
+    "dance dance dance dance dance dance"
+    ". car car car car .";
+}
+
+.space h1,
+.dance h1,
+.car h1 {
+  color: #4ca788;
+  font-size: 1.6em;
+  padding: 4rem 0 1.5rem 0;
+}
+
+.space p,
+.dance p,
+.car p {
+  font-size: 1em;
+  padding: 0 0 3rem 0;
+}
+
+.space {
+  grid-area: space;
+  width: 100%;
+}
+
+.space img {
+  padding: 0 0 7rem 0;
+}
+
+.dance {
+  grid-area: dance;
+  width: 4fr;
+  padding: 1rem 3rem 12rem 3rem;
+  background-color: #101010;
+}
+
+.dance p {
+  color: white;
+}
+
+.car {
+  grid-area: car;
+  width: 100%;
+  padding: 0 0 18rem 0;
+}
+
+.space img,
+.dance img,
+.car img {
+  width: 100%;
+}
+
+/*------------------------ GALLERY ------------------------*/
+
 /*------------------------ FOOTER ------------------------*/
 
 /*Footer start*/
