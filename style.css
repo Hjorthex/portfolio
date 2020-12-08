@@ -331,6 +331,7 @@ header nav {
 .who-am-i {
   grid-area: who;
   width: 100%;
+  padding: 0 0 2rem 0;
 }
 
 .about div h1 {
@@ -341,19 +342,44 @@ header nav {
 
 .about div p {
   width: 100%;
+  font-size: 1em;
 }
 
 .my-drive {
   grid-area: drive;
   width: 4fr;
   background-color: #101010;
-  padding: 0 3rem 0 3rem;
+  padding: 2rem 3rem 5rem 3rem;
   color: white;
 }
 
 .my-dream {
   grid-area: dream;
   width: 100%;
+  padding: 0.5rem 0 4rem 0;
+}
+
+.read-cv-btn {
+  grid-area: read-cv;
+  padding: 4rem 0 4rem 0;
+}
+
+.read-cv-btn ul {
+  list-style: none;
+}
+
+.read-cv-btn ul li {
+  border-style: solid;
+  border-radius: 0.7rem;
+  padding: 0.7rem 0 0.7rem 0;
+  border-color: #4ca788;
+  background-color: #4ca788;
+  text-align: center;
+}
+
+.read-cv-btn ul li a {
+  text-decoration: none;
+  color: white;
 }
 
 /*------------------------ FOOTER ------------------------*/
