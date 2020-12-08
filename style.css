@@ -219,21 +219,16 @@ header nav {
 
 .contact-form div {
   grid-area: form;
+  padding: 0.7rem 0 0.7rem 0;
 }
 
 .contact-form div input {
   border-style: solid;
   border-width: 0.1rem;
   border-color: #101010;
-  border-radius: 0.5rem;
+  border-radius: 0.7rem;
   width: 100%;
-  padding: 0.5rem 0 0.5rem 0;
-}
-
-.contact-form div p {
-  padding: 1rem 0 0 1rem;
-  color: #4ca788;
-  font-size: 1.4em;
+  padding: 0.7rem 0 0.7rem 0;
 }
 
 .contact-form div textarea {
@@ -241,8 +236,9 @@ header nav {
   border-style: solid;
   border-width: 0.1rem;
   border-color: #101010;
-  border-radius: 0.5rem;
-  height: 5rem;
+  border-radius: 0.7rem;
+  height: 9rem;
+  padding: 0.7rem 0 0.7rem 0;
 }
 
 .contact-form button {
@@ -252,7 +248,7 @@ header nav {
   border-style: solid;
   border-width: 0.1rem;
   border-color: #4ca788;
-  border-radius: 0.5rem;
+  border-radius: 0.7rem;
   background-color: #4ca788;
   color: white;
   padding: 0.8rem;
@@ -306,6 +302,58 @@ header nav {
 
 .cv-page div p {
   grid-area: cv-about-txt;
+}
+
+/*------------------------ ABOUT ------------------------*/
+
+.about {
+  display: grid;
+  grid-gap: 1rem;
+  width: 100vw;
+  grid-template-columns: 2rem 1fr 1fr 1fr 1fr 2rem;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "abt-img abt-img abt-img abt-img abt-img abt-img"
+    ". who who who who ."
+    "drive drive drive drive drive drive"
+    ". dream dream dream dream ."
+    ". . read-cv read-cv . .";
+}
+
+.about img {
+  grid-area: abt-img;
+  width: 100%;
+  object-fit: cover;
+  height: 13rem;
+  object-position: 0 20%;
+}
+
+.who-am-i {
+  grid-area: who;
+  width: 100%;
+}
+
+.about div h1 {
+  font-size: 1.6em;
+  color: #4ca788;
+  padding: 0.5rem 0 1rem 0;
+}
+
+.about div p {
+  width: 100%;
+}
+
+.my-drive {
+  grid-area: drive;
+  width: 4fr;
+  background-color: #101010;
+  padding: 0 3rem 0 3rem;
+  color: white;
+}
+
+.my-dream {
+  grid-area: dream;
+  width: 100%;
 }
 
 /*------------------------ FOOTER ------------------------*/
