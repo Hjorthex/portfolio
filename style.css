@@ -581,39 +581,82 @@ header nav {
 
 /*------------------------ FOOTER ------------------------*/
 
-footer {
-  grid-area: footer;
+.contact-info {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: 2rem 1fr 1fr 1fr 1fr 2rem;
   grid-template-rows: auto;
   grid-template-areas:
-    ". contact contact contact contact ."
-    ". so-me so-me so-me so-me .";
+    ". contact-txt contact-txt contact-txt contact-txt ."
+    ". phone phone phone phone ."
+    ". email email email email ."
+    ". some-txt some-txt some-txt some-txt ."
+    ". instagram instagram youtube youtube ."
+    ". facebook facebook linkedin linkedin .";
   width: 100%;
   background-color: #4ca788;
   padding: 2.5rem 0 5rem 0;
   margin-top: -2rem;
 }
 
-footer h1 {
-  display: none;
+.contact-info h1 {
+  display: flex;
+  grid-area: contact-txt;
+  color: #ffffff;
+  font-size: 1.6em;
+  line-height: 3rem;
 }
 
-.so-me {
-  grid-area: so-me;
-  display: grid;
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: 2rem 1fr 1fr 1fr 1fr 2rem;
-  grid-template-rows: auto;
-  grid-template-areas:
-  "instagram instagram instagram youtube youtube youtube"
-  "facebook facebook facebook linkedin linkedin linkedin"
+.contact-info h2 {
+  grid-area: some-txt;
+  color: #ffffff;
+  font-size: 1.6em;
+  line-height: 3rem;
+}
+
+.phone {
+  grid-area: phone;
+  display: flex;
+  width: 100%;
+}
+
+.phone a {
+  align-self: center;
+}
+
+.phone img {
+  width: 4rem;
+}
+
+.email {
+  grid-area: email;
+  display: flex;
+}
+
+.email a {
+  align-self: center;
+}
+
+.email img {
+  width: 4rem;
+}
+
+.phone h1 {
+  color: #ffffff;
+  line-height: 2rem;
+  font-size: 1.2em;
+  font-weight: normal;
+}
+
+.email h1 {
+  color: #ffffff;
+  line-height: 1.9rem;
+  font-size: 1.2em;
+  font-weight: normal;
 }
 
 footer div a img {
-  width: 30%;
+  width: 4rem;
   margin-right: 0.5rem;
 }
 
@@ -622,60 +665,6 @@ footer div a {
   list-style-type: none;
   text-decoration: none;
   font-size: 1.2em;
-}
-
-/*Contact information specific*/
-.contact-info {
-  grid-area: contact;
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "contact contact contact contact"
-    "tel-email reference reference reference";
-  padding-bottom: 3rem;
-}
-
-.contact-info h1 {
-  display: flex;
-  grid-area: contact;
-  color: #ffffff;
-  font-size: 1.6em;
-  line-height: 3rem;
-}
-
-.tel-email {
-  grid-area: tel-email;
-}
-
-.reference {
-  grid-area: reference;
-}
-
-.tel-email h1,
-.tel-email h2 {
-  color: #ffffff;
-  line-height: 2rem;
-  font-size: 1.2em;
-  font-weight: normal;
-}
-
-.reference h1,
-.reference h2 {
-  color: #ffffff;
-  line-height: 1.9rem;
-  font-size: 1.2em;
-  font-weight: normal;
-}
-
-.reference h1 {
-  padding-top: 0.1rem;
-  font-family: sans-serif;
-}
-
-.reference h2 {
-  padding-top: 0.1rem;
 }
 
 /*Social media specific*/
@@ -768,43 +757,79 @@ footer div a {
     color: #4ca788;
   }
   
-  footer {
-    grid-area: footer;
+  .contact-info {
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: 2rem 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2rem;
     grid-template-rows: auto;
     grid-template-areas:
-      ". . . . contact contact contact so-me so-me so-me . . . .";
+      ". . . contact-txt contact-txt contact-txt some-txt some-txt some-txt . . . . ."
+      ". . . phone phone phone instagram instagram instagram youtube youtube youtube . ."
+      ". . . email email email facebook facebook facebook linkedin linkedin linkedin . .";
     width: 100%;
     background-color: #4ca788;
     padding: 2.5rem 0 5rem 0;
     margin-top: -2rem;
   }
   
-  footer h1 {
+  .contact-info h1 {
     display: flex;
-    grid-area: my-so-me;
+    grid-area: contact-txt;
     color: #ffffff;
     font-size: 1.6em;
     line-height: 3rem;
   }
   
-  .so-me {
-    grid-area: so-me;
-    display: grid;
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-    "my-so-me my-so-me my-so-me my-so-me"
-    "instagram instagram youtube youtube"
-    "facebook facebook linkedin linkedin"
+  .contact-info h2 {
+    grid-area: some-txt;
+    color: #ffffff;
+    font-size: 1.6em;
+    line-height: 3rem;
+  }
+  
+  .phone {
+    grid-area: phone;
+    display: flex;
+    width: 100%;
+  }
+  
+  .phone a {
+    align-self: center;
+  }
+  
+  .phone img {
+    width: 4rem;
+  }
+  
+  .email {
+    grid-area: email;
+    display: flex;
+  }
+  
+  .email a {
+    align-self: center;
+  }
+  
+  .email img {
+    width: 4rem;
+  }
+  
+  .phone h1 {
+    color: #ffffff;
+    line-height: 2rem;
+    font-size: 1.2em;
+    font-weight: normal;
+  }
+  
+  .email h1 {
+    color: #ffffff;
+    line-height: 1.9rem;
+    font-size: 1.2em;
+    font-weight: normal;
   }
   
   footer div a img {
-    width: 30%;
+    width: 4rem;
     margin-right: 0.5rem;
   }
   
@@ -813,59 +838,6 @@ footer div a {
     list-style-type: none;
     text-decoration: none;
     font-size: 1.2em;
-  }
-  
-  .contact-info {
-    grid-area: contact;
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "contact contact contact contact"
-      "tel-email reference reference reference";
-    padding-bottom: 3rem;
-  }
-  
-  .contact-info h1 {
-    display: flex;
-    grid-area: contact;
-    color: #ffffff;
-    font-size: 1.6em;
-    line-height: 3rem;
-  }
-  
-  .tel-email {
-    grid-area: tel-email;
-  }
-  
-  .reference {
-    grid-area: reference;
-  }
-  
-  .tel-email h1,
-  .tel-email h2 {
-    color: #ffffff;
-    line-height: 2rem;
-    font-size: 1.2em;
-    font-weight: normal;
-  }
-  
-  .reference h1,
-  .reference h2 {
-    color: #ffffff;
-    line-height: 1.9rem;
-    font-size: 1.2em;
-    font-weight: normal;
-  }
-  
-  .reference h1 {
-    padding-top: 0.1rem;
-    font-family: sans-serif;
-  }
-  
-  .reference h2 {
-    padding-top: 0.1rem;
   }
   
   /*Social media specific*/
@@ -892,6 +864,7 @@ footer div a {
     display: flex;
     align-items: center;
   }
+  
   .grid-container {
     display: grid;
     grid-gap: 1rem;
