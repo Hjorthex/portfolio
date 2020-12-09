@@ -13,7 +13,6 @@
 
 /*------------------------ HEADER ------------------------*/
 
-/*Header start*/
 header {
   position: fixed;
   top: 0;
@@ -463,6 +462,7 @@ header nav {
 .car p {
   font-size: 0.8em;
   padding: 0 0 3rem 0;
+  line-height: 1.5em;
 }
 
 .space {
@@ -471,7 +471,7 @@ header nav {
 }
 
 .space img {
-  padding: 0 0 7rem 0;
+  padding: 5rem 0 7rem 0;
 }
 
 .dance {
@@ -581,8 +581,6 @@ header nav {
 
 /*------------------------ FOOTER ------------------------*/
 
-/*Footer start*/
-
 footer {
   grid-area: footer;
   display: grid;
@@ -591,12 +589,27 @@ footer {
   grid-template-rows: auto;
   grid-template-areas:
     ". contact contact contact contact ."
-    ". instagram instagram youtube youtube ."
-    ". facebook facebook linkedin linkedin .";
+    ". so-me so-me so-me so-me .";
   width: 100%;
   background-color: #4ca788;
   padding: 2.5rem 0 5rem 0;
   margin-top: -2rem;
+}
+
+footer h1 {
+  display: none;
+}
+
+.so-me {
+  grid-area: so-me;
+  display: grid;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 2rem 1fr 1fr 1fr 1fr 2rem;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "instagram instagram instagram youtube youtube youtube"
+  "facebook facebook facebook linkedin linkedin linkedin"
 }
 
 footer div a img {
@@ -625,6 +638,7 @@ footer div a {
 }
 
 .contact-info h1 {
+  display: flex;
   grid-area: contact;
   color: #ffffff;
   font-size: 1.6em;
@@ -687,4 +701,309 @@ footer div a {
 .linkedin a {
   display: flex;
   align-items: center;
+}
+
+@media only screen and (min-width: 1366px)
+{
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    height: 6rem;
+    z-index: 200;
+    border-style: none none solid none;
+    border-color: #4ca788;
+    border-width: 0.4rem;
+  }
+  
+  header .logo {
+    display: none;
+  }
+  
+  header img {
+    display: none;
+  }
+  
+  header nav {
+    display: flex;
+  }
+
+  header nav ul {
+    display: flex;
+    padding: 2rem 5rem;
+  }
+
+  header nav ul li {
+    list-style: none;
+    background-color: #4ca788;
+    border-style: solid;
+    border-color: #4ca788;
+    border-radius: 10px;
+    border-width: 0.2rem;
+    width: 7rem;
+    text-align: center;
+    margin: 0 1rem 0 1rem;
+    padding: 0.5rem 0 0.5rem 0;
+  }
+  header nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
+
+  header nav ul li:hover {
+    background-color: white;
+  }
+
+  header nav ul li a:hover {
+    color: #4ca788;
+  }
+  
+  .on-page-style {
+    background-color: white;
+  }
+
+  .on-page-style a {
+    color: #4ca788;
+  }
+  
+  footer {
+    grid-area: footer;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 2rem 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2rem;
+    grid-template-rows: auto;
+    grid-template-areas:
+      ". . . . contact contact contact so-me so-me so-me . . . .";
+    width: 100%;
+    background-color: #4ca788;
+    padding: 2.5rem 0 5rem 0;
+    margin-top: -2rem;
+  }
+  
+  footer h1 {
+    display: flex;
+    grid-area: my-so-me;
+    color: #ffffff;
+    font-size: 1.6em;
+    line-height: 3rem;
+  }
+  
+  .so-me {
+    grid-area: so-me;
+    display: grid;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "my-so-me my-so-me my-so-me my-so-me"
+    "instagram instagram youtube youtube"
+    "facebook facebook linkedin linkedin"
+  }
+  
+  footer div a img {
+    width: 30%;
+    margin-right: 0.5rem;
+  }
+  
+  footer div a {
+    color: #ffffff;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  
+  .contact-info {
+    grid-area: contact;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "contact contact contact contact"
+      "tel-email reference reference reference";
+    padding-bottom: 3rem;
+  }
+  
+  .contact-info h1 {
+    display: flex;
+    grid-area: contact;
+    color: #ffffff;
+    font-size: 1.6em;
+    line-height: 3rem;
+  }
+  
+  .tel-email {
+    grid-area: tel-email;
+  }
+  
+  .reference {
+    grid-area: reference;
+  }
+  
+  .tel-email h1,
+  .tel-email h2 {
+    color: #ffffff;
+    line-height: 2rem;
+    font-size: 1.2em;
+    font-weight: normal;
+  }
+  
+  .reference h1,
+  .reference h2 {
+    color: #ffffff;
+    line-height: 1.9rem;
+    font-size: 1.2em;
+    font-weight: normal;
+  }
+  
+  .reference h1 {
+    padding-top: 0.1rem;
+    font-family: sans-serif;
+  }
+  
+  .reference h2 {
+    padding-top: 0.1rem;
+  }
+  
+  /*Social media specific*/
+  .instagram {
+    grid-area: instagram;
+  }
+  
+  .youtube {
+    grid-area: youtube;
+  }
+  
+  .facebook {
+    grid-area: facebook;
+  }
+  
+  .linkedin {
+    grid-area: linkedin;
+  }
+  
+  .instagram a,
+  .youtube a,
+  .facebook a,
+  .linkedin a {
+    display: flex;
+    align-items: center;
+  }
+  .grid-container {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 2rem 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2rem;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "lp-main lp-main lp-main lp-main lp-main lp-main lp-main lp-main lp-main lp-main lp-main lp-main lp-main lp-main"
+      "lp-section lp-section lp-section lp-section lp-section lp-section lp-section lp-section lp-section lp-section lp-section lp-section lp-section lp-section"
+      "footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
+  
+  .landing-page {
+    grid-area: lp-main;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 2rem 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2rem;
+    grid-template-rows: auto;
+    grid-template-areas:
+      ". . . . . . lp-main-logo lp-main-logo . . . . . ."
+      ". . . . . . lp-main-txt lp-main-txt . . . . . .";
+    flex-direction: column;
+    background-color: #ffffff;
+    padding-bottom: 20rem;
+    padding-top: 12rem;
+  }
+  
+  .landing-page img {
+    grid-area: lp-main-logo;
+    padding: 3rem 0 3rem 0;
+    width: 100%;
+  }
+  
+  .landing-page h1 {
+    grid-area: lp-main-txt;
+    padding: 0.6rem 0 0.6rem 0;
+    text-align: center;
+    font-weight: normal;
+    border-style: solid none solid none;
+    border-width: 0.35rem;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: #4ca788;
+  }
+  
+  .landing-page-project-ref {
+    grid-area: lp-section;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 2rem 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2rem;
+    grid-template-rows: auto;
+    grid-template-areas:
+      ". colab colab colab colab pers pers pers pers abt abt abt abt .";
+    background-color: #101010;
+    width: 100%;
+    padding-bottom: 20rem;
+    padding-top: 12rem;
+  }
+  
+  .colab-projects {
+    grid-area: colab;
+    width: 100%;
+  }
+  
+  .personal-gal {
+    grid-area: pers;
+  }
+  
+  .about-me {
+    grid-area: abt;
+  }
+  
+  .landing-page-project-ref div img {
+    border-style: solid;
+    border-width: 0.3rem;
+    border-color: #ffffff;
+    width: 100%;
+  }
+  
+  .landing-page-project-ref div h1 {
+    padding: 2.5rem 0 2rem 0;
+    color: #4ca788;
+  }
+  
+  .colab-projects h1 {
+    font-size: 1.6em;
+  }
+  
+  .colab-projects img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+  }
+  
+  .personal-gal h1 {
+    font-size: 1.6em;
+  }
+  
+  .personal-gal img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+  }
+  
+  .about-me h1 {
+    font-size: 1.6em;
+  }
+  
+  .about-me img {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+    object-position: 0 18%;
+  }
+  
 }
