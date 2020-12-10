@@ -60,7 +60,7 @@ header nav {
 .menu-content {
   flex-direction: column;
   text-align: center;
-  margin-top: 8rem;
+  margin-top: 5rem;
 }
 
 .menu-content a {
@@ -1161,6 +1161,7 @@ footer div a {
     grid-area: logo-txt;
     color: #4ca788;
     padding: 6rem 0 1rem 0;
+    font-size: 1.6em;
   }
 
   .pandalogo {
