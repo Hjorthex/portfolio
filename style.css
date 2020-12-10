@@ -210,6 +210,18 @@ header nav {
 
 /*------------------------ CONTACT.HTML ------------------------*/
 
+.contact-form h2 {
+  display: none;
+}
+
+.contact-form p {
+  display: none;
+}
+
+.contact-form a {
+  display: none;
+}
+
 .contact-form {
   display: grid;
   grid-gap: 1rem;
@@ -517,9 +529,19 @@ header nav {
 
 /*------------------------ GALLERY ------------------------*/
 
+.slideshow-desktop {
+  display: none;
+}
+
 .slideshow {
   position: relative;
   padding: 8.5rem 2rem 4rem 2rem;
+}
+
+.slideshow h1 {
+  color: #4ca788;
+  font-size: 1.6em;
+  padding-bottom: 1rem;
 }
 
 .slides {
@@ -565,6 +587,11 @@ header nav {
   ". mand mand mand mand .";
   background-color: #101010;
   padding: 4rem 0 4rem 0;
+}
+
+.personal-gallery img {
+  border-style: solid;
+  border-color: white;
 }
 
 .personal-gallery h1 {
@@ -1112,5 +1139,204 @@ footer div a {
   .car a img {
     width: 100%;
     padding: 12rem 0 12rem 0;
+  }
+
+  .slideshow {
+    display: none;
+  }
+  
+  .slideshow-desktop {
+    display: grid;
+    grid-gap: 1rem;
+    width: 100vw;
+    grid-template-columns: 2rem 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2rem;
+    grid-template-rows: auto;
+    grid-template-areas:
+    ". logo-txt logo-txt logo-txt logo-txt logo-txt logo-txt logo-txt logo-txt logo-txt logo-txt logo-txt logo-txt ."
+    ". pandal pandal pandal pandal hl hl hl hl dancel dancel dancel dancel .";
+    padding: 6rem 0 5rem 0;
+  }
+
+  .slideshow-desktop h1 {
+    grid-area: logo-txt;
+    color: #4ca788;
+    padding: 6rem 0 1rem 0;
+  }
+
+  .pandalogo {
+    grid-area: pandal;
+    width: 100%;
+    padding: 3rem;
+  }
+
+  .pandalogo img {
+    width: 100%;
+  }
+
+  .hlogo {
+    grid-area: hl;
+    width: 100%;
+  }
+
+  .hlogo img {
+    width: 100%;
+  }
+
+  .dancelogo {
+    grid-area: dancel;
+    width: 100%;
+  }
+
+  .dancelogo img {
+    width: 100%;
+  }
+  
+  .prev, .next {
+    display: none;
+  }
+  
+  .personal-gallery {
+    display: grid;
+    grid-gap: 1rem;
+    width: 100vw;
+    grid-template-columns: 2rem 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2rem;
+    grid-template-rows: auto;
+    grid-template-areas:
+    ". spare spare spare spare spare spare spare spare spare spare spare spare ."
+    ". merm merm merm merm mang mang mang mang mand mand mand mand .";
+    background-color: #101010;
+    padding: 16rem 0 16rem 0;
+  }
+  
+  .personal-gallery h1 {
+    grid-area: spare;
+    color: #4ca788;
+    font-size: 1.6em;
+  }
+  
+  .mermaid-gallery {
+    grid-area: merm;
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+    object-position: top;
+  }
+  
+  .manga-gallery {
+    grid-area: mang;
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+    object-position: 0 20%;
+  }
+  
+  .mandalorian-gallery {
+    grid-area: mand;
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+  }
+
+  .contact-form {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 2rem 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2rem;
+    grid-template-rows: auto;
+    grid-template-areas:
+      ". . . curious curious curious curious . cnt-head cnt-head cnt-head . . ."
+      ". . . curious-txt curious-txt curious-txt curious-txt . form form form . . ."
+      ". . . contact-instagram contact-youtube contact-facebook contact-linkedin . form form form . . ."
+      ". . . . . . . . form-btn . . . . ."
+      ;
+    padding: 16rem 0 12rem 0;
+  }
+  
+  .contact-form h2 {
+    display: flex;
+    grid-area: curious;
+    font-size: 1.6em;
+    color: #4ca788;
+  }
+  
+  .contact-form p {
+    display: flex;
+    grid-area: curious-txt;
+    padding: 2rem 0 0 0;
+    font-size: 1.2em;
+  }
+  
+  .contact-form a{
+    display: flex;
+    width: 100%;
+    padding: 9rem 0 0 0;
+  }
+
+  .contact-form a img {
+    height: 3rem;
+
+  }
+
+  .contact-instagram {
+    grid-area: contact-instagram;
+  }
+
+  .contact-youtube {
+    grid-area: contact-youtube;
+  }
+
+  .contact-facebook {
+    grid-area: contact-facebook;
+  }
+
+  .contact-linkedin {
+    grid-area: contact-linkedin;
+  }
+
+  .contact-form h1 {
+    grid-area: cnt-head;
+    padding: 0 0 0 0;
+    color: #4ca788;
+    width: 100%;
+    font-size: 1.6em;
+  }
+  
+  .contact-form div {
+    grid-area: form;
+    padding: 0.7rem 0 0.7rem 0;
+  }
+  
+  .contact-form div input {
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: #101010;
+    border-radius: 0.7rem;
+    width: 100%;
+    padding: 0.7rem 0 0.7rem 0;
+  }
+  
+  .contact-form div textarea {
+    width: 100%;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: #101010;
+    border-radius: 0.7rem;
+    height: 9rem;
+    padding: 0.7rem 0 0.7rem 0;
+    resize: none;
+  }
+  
+  .contact-form button {
+    grid-area: form-btn;
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: #4ca788;
+    border-radius: 0.7rem;
+    background-color: #4ca788;
+    color: white;
+    padding: 0.8rem;
+    width: 100%;
+    align-items: center;
   }
 }
