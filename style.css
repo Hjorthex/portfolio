@@ -11,6 +11,11 @@
   src: url(./fonts/Raleway-VariableFont_wght.ttf);
 }
 
+body {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
 /*------------------------ HEADER ------------------------*/
 
 header {
@@ -428,22 +433,22 @@ header nav {
   padding: 4rem 0 4rem 0;
 }
 
-.read-cv-btn ul {
-  list-style: none;
-}
-
 .read-cv-btn ul li {
-  border-style: solid;
-  border-radius: 0.7rem;
-  padding: 0.7rem 0 0.7rem 0;
-  border-color: #4ca788;
-  background-color: #4ca788;
+  list-style: none;
   text-align: center;
+  padding: 0.7rem 0 0.7rem 0;
 }
 
 .read-cv-btn ul li a {
   text-decoration: none;
   color: white;
+  font-size: 1em;
+  border-style: solid;
+  border-color: #4ca788;
+  background-color: #4ca788;
+  border-radius: 10px;
+  width: 100%;
+  padding: 0.6rem 1rem 0.6rem 1rem;
 }
 
 /*------------------------ PROJECTS ------------------------*/
@@ -479,6 +484,7 @@ header nav {
 
 .space {
   grid-area: space;
+  display: grid;
   width: 100%;
 }
 
@@ -608,12 +614,11 @@ header nav {
   width: 100%;
   background-color: #4ca788;
   padding: 2.5rem 0 5rem 0;
-  margin-top: -2rem;
 }
 
 .contact-info h1 {
-  display: flex;
   grid-area: contact-txt;
+  display: flex;
   color: #ffffff;
   font-size: 1.6em;
   line-height: 3rem;
@@ -637,7 +642,7 @@ header nav {
 }
 
 .phone img {
-  width: 4rem;
+  width: 3rem;
 }
 
 .email {
@@ -650,7 +655,7 @@ header nav {
 }
 
 .email img {
-  width: 4rem;
+  width: 3rem;
 }
 
 .phone h1 {
@@ -679,7 +684,6 @@ footer div a {
   font-size: 1.2em;
 }
 
-/*Social media specific*/
 .instagram {
   grid-area: instagram;
 }
@@ -728,6 +732,7 @@ footer div a {
   
   header nav {
     display: flex;
+    width: 100%;
   }
 
   header nav ul {
@@ -777,8 +782,8 @@ footer div a {
       ". . . email email email facebook facebook facebook linkedin linkedin linkedin . .";
   }
 
-  footer div a img {
-    width: 4rem;
+  footer div a img, .phone img, .email img {
+    width: 3rem;
   }
   
   .grid-container {
@@ -856,7 +861,7 @@ footer div a {
     grid-template-rows: auto;
     grid-template-areas:
     ". . cv-about-desk cv-about-desk cv-about-desk . edu edu edu . my-work my-work my-work ."
-    ". . cv-about-desk cv-about-desk cv-about-desk . skills skills skills . cv-read-more . . ."  ;
+    ". . cv-about-desk cv-about-desk cv-about-desk . skills skills skills . cv-read-more cv-read-more . ."  ;
     padding: 2rem 0 5rem 0;
     background-color: #ffffff;
   }
@@ -910,5 +915,202 @@ footer div a {
 
   .my-skills ul li a:hover {
     color: #4ca788;
+  }
+
+  .about {
+    display: grid;
+    grid-gap: 1rem;
+    width: 100vw;
+    grid-template-columns: 2rem 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2rem;
+    grid-template-rows: auto;
+    grid-template-areas:
+      ". . who who who who . . abt-img abt-img abt-img abt-img . ."
+      ". . drive drive drive drive . . dream dream dream dream . ."
+      ". . drive drive drive drive . . read-cv read-cv . . . .";
+    padding: 10rem 0 7rem 0;
+  }
+  
+  .about img {
+    grid-area: abt-img;
+    width: 100%;
+    object-fit: cover;
+    height: 20rem;
+    border-radius: 30px;
+    object-position: 0 20%;
+    padding: 0 0 0 0;
+  }
+  
+  .who-am-i {
+    grid-area: who;
+    width: 100%;
+    padding: 0 0 0 0;
+  }
+  
+  .about div h1 {
+    font-size: 1.6em;
+    color: #4ca788;
+    padding: 0.5rem 0 1rem 0;
+  }
+  
+  .about div p {
+    width: 100%;
+    font-size: 1em;
+    line-height: 1.5rem;
+  }
+  
+  .my-drive {
+    grid-area: drive;
+    padding: 5rem 0 0 0;
+    color: black;
+    background-color: white;
+  }
+  
+  .my-dream {
+    grid-area: dream;
+    width: 100%;
+    padding: 5rem 0 0 0;
+  }
+  
+  .read-cv-btn {
+    grid-area: read-cv;
+    display: flex;
+  }
+  
+  .read-cv-btn ul li {
+    list-style: none;
+    text-align: center;
+    padding: 0.7rem 0 0.7rem 0;
+  }
+  
+  .read-cv-btn ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    border-style: solid;
+    border-color: #4ca788;
+    background-color: #4ca788;
+    border-radius: 10px;
+    width: 100%;
+    padding: 0.6rem 1rem 0.6rem 1rem;
+  }
+
+  .read-cv-btn ul li a:hover {
+    color: #4ca788;
+    background-color:white;
+  }
+
+  .projects {
+    display: grid;
+    grid-gap: 1rem;
+    width: 100vw;
+    grid-template-columns: 2rem 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2rem;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "spac spac spac spac spac spac spac spac spac spac spac spac spac spac"
+      "dance dance dance dance dance dance dance dance dance dance dance dance dance dance"
+      "car car car car car car car car car car car car car car";
+  }
+  
+  .space {
+    grid-area: spac;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 30% 70%;
+    grid-template-areas:
+    ". spac-h spac-h spac-h spac-h . spac-img spac-img spac-img spac-img spac-img ."
+    ". spac-p spac-p spac-p spac-p . spac-img spac-img spac-img spac-img spac-img .";
+    width: 100%;
+  }
+  
+  .space h1 {
+    grid-area: spac-h;
+    width: 100%;
+    padding: 12rem 0 0 0;
+  }
+
+  .space p {
+    grid-area: spac-p;
+    width: 100%;
+    font-size: 1.2em;
+  }
+
+  .space a {
+    grid-area: spac-img;
+    width: 100%;
+  }
+
+  .space a img {
+    width: 100%;
+    padding: 12rem 0 12rem 0;
+  }
+  
+  .dance {
+    grid-area: dance;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 30% 70%;
+    grid-template-areas:
+    ". dance-h dance-h dance-h dance-h . dance-img dance-img dance-img dance-img dance-img ."
+    ". dance-p dance-p dance-p dance-p . dance-img dance-img dance-img dance-img dance-img .";
+    background-color: #101010;
+    width: 100%;
+    padding: 0;
+  }
+  
+  .dance h1 {
+    grid-area: dance-h;
+    width: 100%;
+    padding: 12rem 0 0 0;
+  }
+
+  .dance p {
+    grid-area: dance-p;
+    color: white;
+    width: 100%;
+    font-size: 1.2em;
+  }
+
+  .dance a {
+    grid-area: dance-img;
+    width: 100%;
+  }
+
+  .dance a img {
+    width: 100%;
+    padding: 12rem 0 12rem 0;
+  }
+
+  .car {
+    grid-area: car;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 30% 70%;
+    grid-template-areas:
+    ". car-h car-h car-h car-h . car-img car-img car-img car-img car-img ."
+    ". car-p car-p car-p car-p . car-img car-img car-img car-img car-img .";
+    width: 100%;
+    padding: 0;
+  }
+
+  .car h1 {
+    grid-area: car-h;
+    width: 100%;
+    padding: 12rem 0 0 0;
+  }
+
+  .car p {
+    grid-area: car-p;
+    width: 100%;
+    font-size: 1.2em;
+  }
+
+  .car a {
+    grid-area: car-img;
+    width: 100%;
+  }
+
+  .car a img {
+    width: 100%;
+    padding: 12rem 0 12rem 0;
   }
 }
